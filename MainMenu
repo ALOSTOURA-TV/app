@@ -1,0 +1,156 @@
+<html dir="rtl"><head>
+<!DOCTYPE html>
+<head><title>القائمة الرئيسية</title></head>
+<body>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+@import "compass/css3";
+</style>
+
+<style type="text/css">
+
+<style>
+body {}
+nav {
+	
+    position: fixed;
+    margin-top:-60px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 3px rgba(0, 0, 0, 0.2);
+    background: #FFF;
+    display: flex;
+    overflow-x: auto;
+    z-index: 99999999999;}
+</style>
+<style type="text/css">
+body {
+
+user-select:none;
+list-style:none;
+
+}
+#page {
+margin-top:60px;
+width:100%;
+margin-bottom:10px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+</span>
+</header>
+<center>
+<div id="page">
+<nav class="nav">
+<a nav="#"><img src="/srv/imgs/cards/c1871510_6594461_main.png" style="width: 356px; height: 40px; border-radius: 10px; margin-right:-0%;" /></a>
+
+</a>
+</nav>
+</iframe>
+</body>
+</html>
+
+
+
+
+</center>
+<body>
+<style type="text/css">
+body {
+background:#FFF;
+padding:0;
+margin:0;
+}
+#page a {
+height:35px;
+width:98%;
+padding-top:8px;
+padding-bottom:2px;
+margin-bottom:0px;
+border:2px solid rgba(188,17,21,255);
+border-radius:15px;
+display:inline-block;
+margin-right:2px;
+margin-left:0px;
+margin-top:10px;
+}
+#page a img {
+
+margin-right:3px;
+margin-top:-6px;
+
+padding-bottom:0px;
+}
+#page a p {
+text-align:center;
+font-family: 'Readex Pro', sans-serif;
+font-size: 12px;
+position: absolute;
+margin-right:17%;
+margin-top:5px;
+width: 50%;
+display:inline-block;
+font-weight:600;
+color:rgba(188,17,21,255);
+}
+img {
+width:42px;height:42px
+}
+#page a:hover {
+    color: #fff;
+    background: #210f80;
+}
+#page a:focus {
+    color: #000;
+    background: #fbd034;
+}
+
+</style>
+</head>
+<body dir="rtl">
+<header>
+</span>
+</header>
+<div id="page">
+	
+	
+
+<a href="go:RMS1" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر البث الرئيسي</p></a>
+<a href="go:RMS2" ><img src="/srv/imgs/seccs/19134586_ico.png?ts=1708567845" style="height:42px;border-radius:100%;" /><p>المسلسلات العربيه</p></a>
+<a href="go:S-RAMADAN" ><img src="/srv/imgs/seccs/30214826_ico.png?ts=1708567659" style="height:42px;border-radius:100%;" /><p>مـــــسلــســــلات رمــــــــضــــــان</p></a>
+<a href="go:RMF3" ><img src="/srv/imgs/seccs/27990552_ico.png?ts=1708567604" style="height:42px;border-radius:100%;" /><p>أفلام الزمن الجميل</p></a>
+<a href="go:RMS4" ><img src="/srv/imgs/seccs/19075162_ico.png?ts=1708567446" style="height:42px;border-radius:100%;" /><p>الافلام العربيه</p></a>
+<a href="go:RMS5" ><img src="/srv/imgs/seccs/19597748_ico.png" style="height:42px;border-radius:100%;" /><p>مسرحيات</p></a>
+<a href="go:RMS6" ><img src="/srv/imgs/seccs/19934288_ico.png" style="height:42px;border-radius:100%;" /><p>سبيستون</p></a>
+<a href="go:RMS7" ><img src="/srv/imgs/seccs/20185798_ico.png" style="height:42px;border-radius:100%;" /><p>المصارعه الحره</p></a>
+<a href="go:RMS8" ><img src="/srv/imgs/seccs/19469041_ico.png?ts=1708650946" style="height:42px;border-radius:100%;" /><p>الافلام الاجنبيه</p></a>
+<a href="go:RMS9" ><img src="/srv/imgs/seccs/19469041_ico.png?ts=1708650946" style="height:42px;border-radius:100%;" /><p>المسلسلات الاجنبيه</p></a>
+<a href="go:RMS10" ><img src="/srv/imgs/seccs/19945456_ico.png" style="height:42px;border-radius:100%;" /><p>المسلسلات التركية </p></a>
+<a href="go:RMS11" ><img src="/srv/imgs/seccs/21116803_ico.png" style="height:42px;border-radius:100%;" /><p>المسلسلات الهنديه </p></a>
+<a href="go:RMS12" ><img src="/srv/imgs/seccs/20074287_ico.png" style="height:42px;border-radius:100%;" /><p>المسلسلات الاسيوية</p></a>
+<a href="go:RMS16" ><img src="/srv/imgs/seccs/20905867_ico.png" style="height:42px;border-radius:100%;" /><p>قصص الأنبياء </p></a>
+<a href="go:RMS14" ><img src="/srv/imgs/seccs/27473063_ico.png" style="height:42px;border-radius:100%;" /><p>القران الكريم </p></a>
+<a href="go:RMS13" ><img src="/srv/imgs/seccs/22715635_ico.png" style="height:42px;border-radius:100%;" /><p>محطات الراديو </p></a>
+<a href="go:New" ><img src="/srv/imgs/seccs/26480083_ico.png" style="height:42px;border-radius:100%;" /><p>سيرفر  جديد </p></a>
+<a href="go:RMS15" ><img src="/srv/imgs/seccs/26479421_ico.png" style="height:42px;border-radius:100%;" /><p>سيرفر vip</p></a>
+
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 1</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 2</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 3</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 4</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 5</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 6</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 7</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 8</p></a>
+<a href="#" ><img src="/srv/imgs/seccs/20020022_ico.png?ts=1708568031" style="height:42px;border-radius:100%;" /><p>سيرفر 9</p></a>
+
+
+
+</div>
+</html>
