@@ -1,0 +1,35 @@
+<style>
+body {}
+nav {
+	
+    position: fixed;
+    margin-top:-65px;
+    width: 100%;
+    height: 60px;
+    box-shadow: 3px rgba(0, 0, 0, 0.2);
+    background: #FFF;
+    display: flex;
+    overflow-x: auto;
+    z-index: 99999999999;}
+</style>
+<style type="text/css">
+body {
+
+user-select:none;
+list-style:none;
+
+}
+#page {
+margin-top:60px;
+width:100%;
+margin-bottom:10px;
+}
+</style>
+</head>
+<body dir="rtl">
+<header>
+</span>
+</header>
+<center>
+<div id="page">
+<nav class="nav">
