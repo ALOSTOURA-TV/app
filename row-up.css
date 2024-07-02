@@ -1,3 +1,25 @@
+* {box-sizing: border-box;}
+body{margin:0;background-color:#000;}
+:root{
+img,svg, video{max-width:100%;height:140px;border-radius:10px;}
+.w-full{display:block;width:100%;}
+.gallery{display: flex;flex-wrap: wrap;margin-top: 0px;}.gallery .image{
+  width: calc(100% / 8);  padding: 3px;}.gallery .image span{display: flex; width: 100%;  overflow: hidden;}
+.gallery .image img{width: 100%;vertical-align: middle;transition: all 0.3s ease;  cursor: pointer;}
+.gallery .image:hover img{ transform: scale(1.1);}
+.gallery .image.hide{ display: none;}.gallery .image.show{
+  animation: animate 0.4s ease;}@keyframes animate {0%{
+    transform: scale(0.5);  }  100%{  transform: scale(1); }}
+@media (max-width: 1000px) {.gallery .image{
+    width: calc(100% / 100%);  }}@media (min-width: 1360px){
+  .gallery {margin-left: -0%;margin-right: -0%;}}
+@media (max-width: 800px) {.gallery .image{
+    width: calc(50% / 4);}}@media (max-width: 700px) {
+  .wrapper nav .items{    max-width: 1000px;}  nav .items span{
+    padding: 7px 15px;  }}@media (max-width: 600px) {
+  .wrapper{    margin: 0px auto;  }  .wrapper nav .items{
+    overflow: auto;  }  nav .items span{ margin: 0px;  }
+    .gallery .image{   width: calc(100% / 4);    }}
 .floating-button {
     position: fixed;
     bottom: 20px;
