@@ -107,106 +107,17 @@ width:42px;height:42px
     color: #000;
     background: #fbd034;
 }
-.floating-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px; /* Changed from 'right' to 'left' */
-    width: 50px;
-    height: 50px;
-    background-color: #210f80;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.8;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
-    transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
-}
+.floating-button {position: fixed;bottom: 20px;left: 20px;width: 50px;height: 50px;
+ background-color: #210f80;border-radius: 50%;display: flex;
+ align-items: center;justify-content: center;cursor: pointer;
+ opacity: 0.8;box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+ transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;}
+.floating-button:hover {background-color: #fbd034;transform: scale(1.1);}
+.arrow-up {width: 0;height: 0;border-left: 12px solid transparent;
+ border-right: 12px solid transparent;border-bottom: 25px solid white;
+ position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}}
 
-.floating-button:hover {
-    background-color: #fbd034;
-    transform: scale(1.1);
-}
-
-.arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
-    border-bottom: 25px solid white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-.watch-now-bur {
-    margin-top: 10px;
-    display: inline-block;
-    padding: 6px 15px;
-    background: linear-gradient(45deg, #ff5555, #ff0000); /* Gradient background with red hues */
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2rem;
-    border: 2px solid #cc0000;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
-}
-
-.watch-now-bur:hover {
-    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.discontent {
-  text-align: center;
-  width: 100%;
-  margin: auto 0; /* Center the content horizontally and remove the top margin */
-  flex: 1; /* Allow the content to expand and fill the remaining vertical space */
-}
-.custom-video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.custom-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.tabs {
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-.custom-tab {
-  display: inline-block;
-      padding: 10px 20px;
-      background-color: #FF0000; /* Red background color */
-      color: #FFFFFF; /* White text color */
-      font-family: 'Exo 2', sans-serif;
-      cursor: pointer;
-      margin: auto 10px; /* Increase margin for more space */
-      transition: background-color 0.3s, color 0.3s;
-          }
-
-          .custom-tab:hover {
-            background-color: #FF3333; /* Slightly lighter red on hover */
-      transform: scale(1.1); /* Scale up on hover */
-          }
+	
 </style>
 </head>
 <body dir="rtl">
@@ -247,92 +158,8 @@ width:42px;height:42px
 </html>
 </div>
 <div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
-<script>
-const items = document.querySelectorAll('figure');
-const itemsToShow = 16; // Number of items to reveal on each scroll
-let lastShownIndex = 0;
 
-function revealItems() {
-  for (let i = lastShownIndex; i < lastShownIndex + itemsToShow; i++) {
-    if (i < items.length) {
-      items[i].style.display = 'block';
-    }
-  }
-  lastShownIndex += itemsToShow;
-}
 
-window.addEventListener('scroll', () => {
-  const scrollPosition = window.scrollY + window.innerHeight;
-  const documentHeight = document.body.clientHeight;
-
-  if (scrollPosition >= documentHeight - 300) {
-    revealItems();
-  }
-});
-
-// Initially reveal the first set of items
-revealItems();
-    </script>
-<script>function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-function loadImages() {
-    const imagesToLoad = document.querySelectorAll('.defer-image');
-
-    imagesToLoad.forEach((image) => {
-        if (isInViewport(image)) {
-            const imgUrl = image.getAttribute('data-src');
-            if (imgUrl) {
-                const img = new Image();
-                img.src = imgUrl;
-                img.onload = () => {
-                    image.setAttribute('src', imgUrl);
-                    image.classList.remove('defer-image');
-                };
-            }
-        }
-    });
-}
-
-window.addEventListener('scroll', loadImages);
-window.addEventListener('resize', loadImages);
-
-loadImages();
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  function loadStylesheets() {
-    function loadStylesheet(href) {
-      var link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = href;
-      link.type = 'text/css';
-      link.media = 'all';
-      document.getElementsByTagName('head')[0].appendChild(link);
-    }
-
-    // Load Font Awesome stylesheet
-    loadStylesheet('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
-
-    // Load Google Fonts stylesheet
-    loadStylesheet('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap');
-  }
-
-  if (window.addEventListener) {
-    window.addEventListener('load', loadStylesheets, false);
-  } else if (window.attachEvent) {
-    window.attachEvent('onload', loadStylesheets);
-  } else {
-    window.onload = loadStylesheets;
-  }
-</script>
 <script>
         const goToTopButton = document.getElementById('go-to-top-button');
 
@@ -350,6 +177,6 @@ loadImages();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
-    <script src="https://raw.githack.com/watchmedash/watchmenow/main/script.js"></script>
+    <script src="https://raw.githack.com/ALOSTOURA-TV/Ostora/main/script.js"></script>
 </body>
 </html>
