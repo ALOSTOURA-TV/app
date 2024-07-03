@@ -10644,7 +10644,7 @@ fieldset:disabled .btn {
   --fimobile-yellow: #ffbd17;
   --fimobile-blue: #3c63e2;
   --fimobile-rounded: 15px;
-  --fimobile-padding: 15px;
+  --fimobile-padding: 0px;
   --bs-gutter-x: var(--fimobile-padding);
   --fimobile-input-rounded: 10px;
   /* radial gradient colors */
