@@ -10670,7 +10670,7 @@ fieldset:disabled .btn {
   --fimobile-card-color: rgba(255, 255, 255, 0.85);
   --fimobile-card-text: #000000;
   --fimobile-page-bg-1: #ffffff;
-  --fimobile-page-bg-2: #e5ecfe;
+  --fimobile-page-bg-2: #ffffff;
   --fimobile-page-text: #000000;
   --fimobile-page-link: var(--fimobile-theme-color);
 }
@@ -11281,7 +11281,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   overflow-y: auto;
-  background-color: var(--fimobile-theme-color);
+  background-color: #ffffff;
 }
 
 main {
