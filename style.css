@@ -11297,7 +11297,7 @@ main {
 
 .dark-bg {
   background-color: var(--fimobile-theme-color);
-  background-image: url("../img/backgorund-image.svg");
+  background-image: url("../backgorund-image.svg");
   background-repeat: repeat-x;
   background-position: bottom center !important;
   animation: zoombg infinite 10s;
