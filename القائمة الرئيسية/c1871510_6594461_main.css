@@ -1,0 +1,48 @@
+/*-------head and header-------*/
+body {}
+nav {
+	
+position: fixed;
+margin-top:-60px;
+width: 98%;
+  
+background: #FFF;
+
+z-index: 99999999999;}
+
+#nav a {
+height:35px;
+width:100%;
+padding-top:0px;
+padding-bottom:5px;
+margin-bottom:0px;
+border:2px solid rgba(188,17,21,155);
+border-radius:15px;
+display:inline-block;
+margin-right:-10px;
+margin-left:0px;
+margin-top:10px;
+}
+#nav {
+margin-top:60px;
+
+margin-bottom:10px;
+}
+
+#nav a:hover {
+    color: #fff;
+    background: #210f80;
+}
+#nav a:focus {
+    color: #000;
+    background: #fbd034;
+	
+	
+}
+
+
+
+
+
+
+</style>
