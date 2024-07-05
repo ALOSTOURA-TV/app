@@ -1,0 +1,1014 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Changed from 'right' to 'left' */
+    width: 50px;
+    height: 50px;
+    background-color: #FF0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+}
+
+.floating-button:hover {
+    background-color: #DD0000;
+    transform: scale(1.1);
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 25px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.watch-now-bur {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 15px;
+    background: linear-gradient(45deg, #ff5555, #ff0000); /* Gradient background with red hues */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.2rem;
+    border: 2px solid #cc0000;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.watch-now-bur:hover {
+    background: linear-gradient(45deg, #cc0000, #aa0000); /* Darker gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.discontent {
+  text-align: center;
+  width: 100%;
+  margin: auto 0; /* Center the content horizontally and remove the top margin */
+  flex: 1; /* Allow the content to expand and fill the remaining vertical space */
+}
+.custom-video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.custom-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tabs {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+.custom-tab {
+  display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF0000; /* Red background color */
+      color: #FFFFFF; /* White text color */
+      font-family: 'Exo 2', sans-serif;
+      cursor: pointer;
+      margin: auto 10px; /* Increase margin for more space */
+      transition: background-color 0.3s, color 0.3s;
+          }
+
+          .custom-tab:hover {
+            background-color: #FF3333; /* Slightly lighter red on hover */
+      transform: scale(1.1); /* Scale up on hover */
+          }
+li[data-tooltip] {
+  position: relative;
+  list-style: none; /* Remove default list styles */
+  margin: 0; /* Remove any margins */
+}
+
+/* Style for the tooltip content */
+li[data-tooltip]::after {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* Style for the image inside the tooltip */
+li[data-tooltip] img {
+  max-width: 20%; /* Set the maximum width of the image */
+}
+
+/* Additional style for the tooltip images */
+li[data-tooltip] img {
+  max-height: 20%; /* Set the maximum height of the image */
+}
+
+/* Show the tooltip on hover */
+li[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.announcement-banner {
+    background-color: rgba(0, 255, 0, 0.7); /* Yellow background with transparency */
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Exo 2', sans-serif;
+    position: relative;
+    border: 2px solid #FFFFFF; /* White border */
+    border-left: 1px solid #FFFFFF; /* White border on the left side */
+    border-right: 1px solid #FFFFFF;
+}
+
+.announcement-banner p {
+    margin: 0;
+}
+
+.announcement-banner a {
+    color: #FFFFFF; /* Red link font color */
+    text-decoration: underline;
+}
+
+.hot {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Yellow background with transparency */
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  .hot p {
+      margin: 0;
+  }
+
+  .hot a {
+      color: #FFFFFF; /* Red link font color */
+      text-decoration: none;
+  }
+
+  .hot img {
+      height: auto;
+      width: 100%; /* Make images take 100% of the container width */
+      max-width: 240px; /* Limit maximum width of each image */
+      max-height: 320px; /* Limit maximum height of each image */
+      animation: glowAnimation 2s infinite alternate; /* Apply a continuous glow animation */
+}
+
+@keyframes glowAnimation {
+    from {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.7); /* Initial shadow with yellow glow */
+    }
+    to {
+        box-shadow: 0 0 40px rgba(255, 255, 0, 1); /* Larger shadow for a stronger glow */
+    }
+}
+
+
+/* Style the related movies gallery container */
+.related-movies-gallery {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to a new line */
+}
+
+/* Style each related movie item */
+.related-movies-gallery figure {
+  flex: 0 0 calc(20% - 20px); /* Adjust the width as needed to fit 5 movies in a row */
+  margin: 0 10px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+/* Style the movie title */
+.related-movies-gallery figcaption {
+  text-align: center;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  padding: 2px;
+}
+
+/* Style the movie image */
+.related-movies-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+/* Style the HD tag */
+.related-movies-gallery .tag.hd {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+/* Add hover effect */
+.related-movies-gallery figure:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+.tag {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: rgba(0, 0, 0, 0.4); /* Transparent background with some opacity */
+    color: #fff;
+    font-family: 'Exo 2', sans-serif;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* Style for the "HD" tag */
+.hd {
+    background-color: rgba(0, 0, 255, 0.4) /* Blue color for HD */
+}
+
+.ts {
+    background-color: rgba(0, 0, 0, 0.4); /* Red color with 0.4 opacity */
+}
+/* Style for the "SD" tag */
+.cam {
+    background-color: rgba(255, 0, 0, 0.4) /* Orange color for SD */
+}
+
+.tv {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+.episode-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.episode-tab-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 5px 0;
+}
+
+.episode-tab {
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.episode-tab:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.episode-tab.active {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.dropdown-wrapper {
+  margin-top: 15px;
+    display: flex;
+    align-items: center; /* Vertical alignment, if necessary */
+    flex-wrap: nowrap;; /* Allows items to wrap onto multiple lines if they run out of space */
+    gap: 5px; /* Spacing between the dropdowns */
+}
+
+.dropdown-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    left: 0; /* Adjust the positioning to be at the left edge */
+    width: 100%; /* Make the width 100% */
+    z-index: 1000; /* Adjust z-index as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none; /* Ensure there's no border */
+    transform: translateY(20px); /* Move the dropdown above the parent */
+}
+
+/* Style individual dropdown items */
+.dropdown-content a {
+  color: #333; /* Adjust color as needed */
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  background-color: transparent; /* No background */
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+
+.dropdown-toggle {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+
+.filter-button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 5px 0;
+}
+
+.filter-button {
+  margin: 5px;
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.filter-button.active {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.terra {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            align-items: center; /* centers vertically */
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+.search-container {
+  margin-top: 20px;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 0;
+}
+
+.search-container form {
+  padding: 8px;
+  position: relative;
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.search-container button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}
+
+
+.search-container button i {
+  font-size: 20px;
+  color: red;
+
+}
+
+#searchResults {
+  position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+  display: none;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  color: red;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+}
+
+#searchResults ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#searchResults li {
+  margin-bottom: 5px;
+}
+
+#searchResults a {
+  font-weight: bold;
+  text-decoration: none;
+  color: red; /* Set the font color of the links to red */
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the list items */
+}
+
+#searchResults a:hover {
+  text-decoration: underline;
+}
+
+#searchResults p {
+  color: red; /* Set the font color of "No results found" to red */
+}
+
+
+.about-container {
+      padding: 10px;
+      background: linear-gradient(to right, red, darkred);
+      border-radius: 8px;
+      color: white; /* text color */
+      font-weight: bold;
+      max-width: 85%;
+      margin: 20px auto;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+
+figure {
+    position: relative;
+}
+
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 95%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  margin: 0 auto; /* Centering */
+}
+
+#my-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+  .download-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-family: 'Exo 2', sans-serif;
+            color: white; /* Change font color to red */
+            font-weight: bold; /* Make the font bold */
+            text-decoration: none;
+  }
+
+
+
+/* Reset margin and padding for the whole page */
+body {
+  background: radial-gradient(circle, #FF3333, #770000);
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  margin: 20px auto 0; /* Center the content horizontally and remove the top margin */
+  flex: 1; /* Allow the content to expand and fill the remaining vertical space */
+}
+
+nav {
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle, #FF3333, #770000);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px; /* Add 10px padding to the top and bottom, and 20px padding to the left and right */
+  height: 80px;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Set the fixed height of the navigation bar */
+}
+
+/* New CSS for the image container */
+.image-container {
+  text-align: center;
+  margin-top: 20px; /* Add some space below the nav bar */
+}
+
+.image-container img {
+  width: 25%;
+  max-width: 100%; /* Limit the width of the image to its original size */
+  opacity: 2;
+   /* Adjust the opacity of the image */
+}
+
+.image-contained {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .image-contained img {
+      width: 100%;
+      height: auto;
+      display: block; /* This ensures the image behaves as a block element */
+    }
+
+.content {
+  width: 85%;
+  margin: 0 auto; /* Center the content horizontally and remove all margins */
+}
+
+h1, h2, h3, p, li {
+    color: #fff; /* White font color */
+    font-family: 'Exo 2', sans-serif; /* Apply "Exo 2" font to all text */
+}
+
+
+.button-container {
+  padding: 8px 16px;
+    text-align: center;
+}
+
+.watch-now-button {
+  margin-top: 5px;
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Exo 2', sans-serif; /* Change the font to Exo 2 */
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a deeper shadow effect */
+}
+
+.watch-now-button:hover {
+    background-color: #cc0000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+body::after {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 1px; /* To start below the navigation bar */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px); /* Adjust the height to cover the remaining space between footer and page body */
+  background-image: url("https://i.postimg.cc/g2WS39dH/doggie.webp");
+  background-repeat: repeat-y;
+  background-size: cover; /* Set background-size to "cover" to make the image cover the entire container */
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo, title, and tagline */
+}
+
+.logo-container {
+    margin-right: 10px;
+    display: flex; /* Add display flex to allow flex items to be aligned */
+    align-items: center; /* Vertically center the logo inside the container */
+    height: 80px; /* Set the fixed height of the logo container */
+    width: auto; /* Allow the container's width to adjust automatically with the logo's size */
+}
+
+.logo-container img {
+    height: 100%;
+    width: auto;
+}
+
+.nav-title {
+    display: flex;
+    flex-direction: column; /* Display the title and tagline in a column */
+    justify-content: center; /* Center the title and tagline vertically */
+    height: 80%; /* Make the .nav-title container occupy 80% of the height of the .logo-title-container */
+    max-height: 80px; /* Set the maximum height of the .nav-title container to 80px */
+}
+
+.nav-title h1, .nav-title p {
+    font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the title and tagline */
+    margin: 0; /* Remove margin for precise spacing */
+    text-align: center; /* Center the title and tagline horizontally */
+    white-space: nowrap; /* Prevent the title and tagline from wrapping to a second line */
+}
+
+.nav-title h1 {
+    font-size: calc(4vw); /* Set the font size using viewport width units (vw) */
+    color: #fff; /* Set the font color to white */
+}
+
+.nav-title p {
+    font-size: calc(2vw); /* Set the font size using viewport width units (vw) */
+    color: #f0f0f0; /* Set the font color to a light greyish white (#f0f0f0) */
+}
+
+/* Existing styles */
+
+nav {
+  font-family: 'Exo 2', sans-serif;
+  background: radial-gradient(circle, #FF3333, #770000);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  height: 80px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav li:not(:last-child) {
+  margin-right: 30px;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw;
+  /* Add the following styles to set a minimum font size for the links in the nav bar */
+  min-font-size: 16px;
+  font-size: max(min-font-size, 1.5vw);
+  transition: color 0.3s ease;
+}
+
+nav li a:hover {
+  color: black;
+}
+
+/* Add the following CSS to align the icons to the right side */
+nav .icons {
+  display: flex;
+  align-items: center;
+}
+
+/* Add the following media query to adjust the font size for smaller screens */
+@media screen and (max-width: 768px) {
+  nav li a {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Add the following CSS to keep links and icons in one line */
+nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Add the following CSS to create space between links and icons */
+nav .nav-links li {
+  margin-right: 10px;
+}
+
+
+/* Additional CSS for the menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+}
+
+/* Add the following media query to show the menu icon and hide the navigation links when the screen size is reduced */
+@media screen and (max-width: 768px) {
+  nav .nav-links ul {
+    display: flex;
+    flex-direction: column; /* Stack the navigation links in rows */
+    align-items: flex-start; /* Align the navigation links to the left side */
+  }
+
+  nav .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  /* Show the menu icon when the screen size is small */
+  .menu-icon {
+    display: none; /* Remove the menu icon */
+  }
+
+  /* Show the navigation links when the menu icon is hidden */
+  nav ul.show-menu {
+    display: flex;
+  }
+}
+
+footer {
+  background-color: radial-gradient(circle, #FF3333, #770000);
+  padding: 10px 0;
+  width: 100%;
+  bottom: 0; /* Position the footer at the bottom */
+  left: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links,
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%; // Add this
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5vw;
+  display: block;
+  /* Add the following styles to set a minimum font size */
+  min-font-size: 16px; /* Adjust the minimum font size as needed */
+  font-size: max(min-font-size, 1.5vw); /* Set the font size as the larger value between 1.5vw and the minimum font size */
+}
+
+.footer-links a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: attr(data-icon);
+  font-size: 1.5vw;
+  margin-right: 5px;
+}
+
+.footer-links a:hover {
+  color: black;
+}
+
+.social-icons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: black;
+}
+
+/* Add margins to create space between the links and icons */
+.footer-nav {
+  margin-top: 10px;
+}
+
+/* Add the following CSS to set the footer nav to 100% width */
+@media screen and (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Additional CSS for the copyright line */
+footer .copyright {
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 20px;
+  font-family: 'Exo 2', sans-serif; /* Apply the "Exo 2" font to the copyright text */
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+
+.gallery figure {
+    flex: 1 0 calc(12.5% - 2%); /* 8 items per row */
+    max-width: calc(12.5% - 2%);
+    margin: 1%;
+    padding: 0; /* Reduce padding to 5px */
+    box-sizing: border-box;
+    background: none; /* Add a red to dark red gradient background */
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.0);
+    position: relative; /* Make corners rounded */
+}
+.gallery figure::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: none; /* Semi-transparent light red to red gradient */
+    border-radius: 10px; /* Make corners rounded */
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+.gallery figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+     /* Make image corners rounded */
+}
+
+.gallery figure:hover img {
+            transform: scale(1.1); /* Add hover effect */
+        }
+
+        .custom-tooltip {
+            display: none;
+            position: absolute;
+            background-color: rgba(128, 128, 128, 0.8); /* Transparent grey color */
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            pointer-events: none;
+            border-radius: 10px;
+            max-width: 240px; /* Set a maximum width */
+            text-align: center; /* Center text */
+        }
+
+        /* Resize text inside the tooltip */
+        .custom-tooltip h2,
+        .custom-tooltip p {
+            font-size: 14px;
+            margin: 5px 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Limit the number of lines to 1 */
+            -webkit-box-orient: vertical;
+        }
+
+/* Adjust to 4 items per row for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .gallery figure {
+        flex: 1 0 calc(25% - 2%);
+        max-width: calc(25% - 2%);
+    }
+}
+
+/* Styles for the image and the caption */
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery figcaption {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif; /* Set font family to Exo 2 */
+    color: #fff; /* Change the font color to white */
+    width: 100%; /* Make the caption width same as image width */
+    word-wrap: break-word;
+     /* Wrap the long titles to next line */
+}
+
+.title {
+  margin-top: 10px;
+  color: #fff;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 18px;
+}
+
+
+.pagination {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pagination a:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-button {
+    margin: 0 5px; /* Adjust the value as per your design preference */
+}
+
+.filter-button.genre-button {
+    margin: 5px;  /* Adding margins to all sides for spacing */
+}
