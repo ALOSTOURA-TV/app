@@ -377,7 +377,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #990000;
+  color: #FFFFFF;
   background-color: #fff;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
@@ -11585,7 +11585,7 @@ main {
   font-size: 16px;
   text-transform: uppercase;
   border-radius: calc(var(--fimobile-rounded) - 5px);
-  position: relative;
+  
 }
 
 .btn.shadow {
@@ -11997,7 +11997,7 @@ main {
 /* 9. header */
 .header {
   padding: var(--fimobile-padding);
-  line-height: 44px;
+  line-height: 54px;
   width: 100%;
   top: 0;
   left: 0;
@@ -12340,16 +12340,7 @@ main {
   opacity: 0.5;
 }
 
-.sidebar-wrap.sidebar-overlay::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: var(--fimobile-theme-color);
-  opacity: 0;
-}
+
 
 .sidebar-wrap.sidebar-overlay .sidebar {
   width: 280px;
