@@ -37,7 +37,7 @@
                 color: black;
             }
             .btn-light {
-                color: #0e0e0e;
+                
                 background: radial-gradient(ellipse at 30% 30%, #e4f3fc63 0%, #d0d9f608 50%, #570add2b 100%);
             }
             .sidebar-wrap .sidebar .nav .nav-item .nav-link.active {
