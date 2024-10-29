@@ -12230,7 +12230,7 @@ body {
   float: left;
   display: block;
   min-height: 100%;
-  padding: 0px;
+  padding: 15px;
   position: relative;
   width: 150px;
   z-index: 1;
