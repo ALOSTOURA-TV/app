@@ -2827,12 +2827,6 @@
     },
     {
         "id": "urlButton",
-        "title": "Cars 2",
-        "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/szaaEaRQEqvZoyBIppNIRRhtfSV.jpg",
-        "url": "http://vod.cdnrdn.com/eu1/vod4/Movies/AutoTopMovies/AR/Cars2.mp4"
-    },
-    {
-        "id": "urlButton",
         "title": "سيارات 2",
         "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/szaaEaRQEqvZoyBIppNIRRhtfSV.jpg",
         "url": "http://vod.cdnrdn.com/eu1/moviesnew/arb/Animation/Cars-2.mp4"
