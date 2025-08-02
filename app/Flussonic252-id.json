@@ -3,8 +3,8 @@
   
   { "id": "Movies-Arabic-400", "url": "/ArabicMovies2/2025/Restart.mp4", "image": "https://alostoura-tv.github.io/imgur/Restart.jpg", "title": "ريستارت", "year": "2025" },
   { "id": "Movies-Arabic-399", "url": "/download/rikatv.project.x/%5BRikaTV%5D.PROJECT.X.WEBR5.1080p.HDCAM.mp4", "image": "https://alostoura-tv.github.io/imgur/Upload/المشروع X.jpg", "title": "المشروع X", "year": "2025" },
-  { "id": "Movies-Arabic-398", "url": "ElDashash", "image": "https://alostoura-tv.github.io/imgur/Upload/El-Dashash.jpg", "title": "الدشاش", "year": "2025" },
-  { "id": "Movies-Arabic-397", "url": "SikoSiko", "image": "https://alostoura-tv.github.io/imgur/SikoSiko.jpg", "title": "سيكو سيكو", "year": "2025" },
+  { "id": "Movies-Arabic-398", "url": "/download/el.-dashash.-2025.1080p.-web-dl.-akwam/El.Dashash.2025.1080p.WEB-DL.AKWAM.mp4", "image": "https://alostoura-tv.github.io/imgur/Upload/El-Dashash.jpg", "title": "الدشاش", "year": "2025" },
+  { "id": "Movies-Arabic-397", "url": "/ArabicMovies2/2025/SikoSiko.mp4", "image": "https://alostoura-tv.github.io/imgur/SikoSiko.jpg", "title": "سيكو سيكو", "year": "2025" },
   { "id": "Movies-Arabic-396", "url": "BadaaSaat", "image": "https://alostoura-tv.github.io/imgur/BadaaSaat.jpg", "title": "بضع ساعات في يوم ما", "year": "2025" },
   { "id": "Movies-Arabic-395", "url": "6Ayyam", "image": "https://i.imgur.com/cfpHZsg.jpeg", "title": "٦ أيام", "year": "2025" },
   { "id": "Movies-Arabic-394", "url": "Laylet3ed", "image": "https://alostoura-tv.github.io/imgur/Upload/ليلة العيد.jpg", "title": "ليلة العيد", "year": "2025" },
@@ -407,3 +407,4 @@
   
 
   ]
+
