@@ -32,15 +32,15 @@
   { "id": "Movies-Arabic-372", "url": "/ArabicMovies2/2024/Re7la404.mp4", "image": "https://i.imgur.com/NIuVCmx.jpeg", "title": "رحلة 404", "year": "2024" },
   { "id": "Movies-Arabic-371", "url": "/ArabicMovies2/2024/Sheqo.mp4", "image": "https://i.imgur.com/xOoT5vU.jpeg", "title": "شقو", "year": "2024" },
   { "id": "Movies-Arabic-370", "url": "/ArabicMovies2/2023/Rahba.mp4", "image": "https://i.imgur.com/dpwdg0P.jpeg", "title": "رهبة", "year": "2023" },
-  { "id": "Movies-Arabic-369", "url": "ElSaff", "image": "https://i.imgur.com/8wEyrea.jpeg", "title": "الصف الأخير", "year": "2021" },
-  { "id": "Movies-Arabic-368", "url": "Shamarikh", "image": "https://i.imgur.com/aZ83JpG.jpeg", "title": "شماريخ", "year": "2021" },
-  { "id": "Movies-Arabic-367", "url": "5Gawlat", "image": "https://i.imgur.com/3aQjdto.jpeg", "title": "5 جولات", "year": "2021" },
-  { "id": "Movies-Arabic-366", "url": "AnfwaThala", "image": "https://i.imgur.com/ElwRS9B.jpeg", "title": "انف وثلاث عيون", "year": "2021" },
-  { "id": "Movies-Arabic-365", "url": "Akhi Fok E", "image": "https://i.imgur.com/W1f4Tgf.jpeg", "title": "اخي فوق الشجرة", "year": "2021" },
-  { "id": "Movies-Arabic-364", "url": "VoyVoyVoy", "image": "https://i.imgur.com/IiRK5vU.jpeg", "title": "فو فو فو", "year": "2021" },
-  { "id": "Movies-Arabic-363", "url": "AboNasab", "image": "https://i.imgur.com/5PigFCs.jpeg", "title": "ابو نسب", "year": "2021" },
-  { "id": "Movies-Arabic-362", "url": "L.T.Lew7dk", "image": "https://i.imgur.com/MYPzzyT.jpeg", "title": "لية تعشها لوحدك", "year": "2021" },
-  { "id": "Movies-Arabic-361", "url": "Honeymooni", "image": "https://i.imgur.com/jio0U1o.jpeg", "title": "شهر زى العسل", "year": "2021" },
+  { "id": "Movies-Arabic-369", "url": "ElSaff", "image": "https://i.imgur.com/8wEyrea.jpeg", "title": "الصف الأخير", "year": "2023" },
+  { "id": "Movies-Arabic-368", "url": "/ArabicMovies2/2023/Shamareekh.mp4", "image": "https://i.imgur.com/aZ83JpG.jpeg", "title": "شماريخ", "year": "2023" },
+  { "id": "Movies-Arabic-367", "url": "/download/aflam-romanticpoet-part.1/5%20Rounds.WEB-DL.1080p.BY.%20RoMaNTiCPoET.mp4", "image": "https://i.imgur.com/3aQjdto.jpeg", "title": "5 جولات", "year": "2023" },
+  { "id": "Movies-Arabic-366", "url": "/download/aflam-romanticpoet-part.1/A%20Nose%20And%20Three%20%20Eyes.WEB-DL.1080p.BY.%20RoMaNTiCPoET.mp4", "image": "https://i.imgur.com/ElwRS9B.jpeg", "title": "انف وثلاث عيون", "year": "2024" },
+  { "id": "Movies-Arabic-365", "url": "/download/aflam-romanticpoet-part.1/Akhi%20Fok%20El%20Shagara.WEB-DL.1080p.BY.%20RoMaNTiCPoET.mp4", "image": "https://i.imgur.com/W1f4Tgf.jpeg", "title": "اخي فوق الشجرة", "year": "2023" },
+  { "id": "Movies-Arabic-364", "url": "/ArabicMovies2/2023/VoyVoyVoy.mp4", "image": "https://i.imgur.com/IiRK5vU.jpeg", "title": "فوي فوي فوي", "year": "2023" },
+  { "id": "Movies-Arabic-363", "url": "/ArabicMovies2/2023/AboNasab.mp4", "image": "https://i.imgur.com/5PigFCs.jpeg", "title": "ابو نسب", "year": "2023" },
+  { "id": "Movies-Arabic-362", "url": "/download/civil.-war.-2024.720p.-clean.-hdcam.-cinema-3-d/Leh.Teshha.Lewahdak.720p.WEBDL.CINEMA3D.mp4", "image": "https://i.imgur.com/MYPzzyT.jpeg", "title": "ليه تعيشها لوحدك", "year": "2024" },
+  { "id": "Movies-Arabic-361", "url": "/movie/47749/47749-480p.mp4/playlist.m3u8", "image": "https://i.imgur.com/jio0U1o.jpeg", "title": "شهر زى العسل", "year": "2024" },
   { "id": "Movies-Arabic-360", "url": "3Almashaa", "image": "https://i.imgur.com/nYQ5dih.jpg", "title": "عالماشي", "year": "2021" },
   { "id": "Movies-Arabic-359", "url": "Analihabib", "image": "https://i.imgur.com/0yaOTWH.jpeg", "title": "أنا لحبيبي", "year": "2021" },
   { "id": "Movies-Arabic-358", "url": "AwladKarim", "image": "https://i.imgur.com/gNK8Zk9.jpeg", "title": "اولاد حريم كريم", "year": "2021" },
@@ -403,10 +403,5 @@
   { "id": "Movies-Arabic-1", "url": "KhettaBadi", "image": "https://i.imgur.com/gKeqsji.jpeg", "title": "خطة بديلة", "year": "2021" }
   
   
-  
-  
 
   ]
-
-
-
