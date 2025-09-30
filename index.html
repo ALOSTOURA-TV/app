@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://i.imgur.com/54DNXLH.png">
+  <title>تطبيق الأسطورة | الصفحة الرسمية</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* خلفية متحركة */
+    body {
+      background: linear-gradient(-45deg, #e0f2fe, #ede9fe, #dbeafe, #f1f5f9);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% {background-position:0% 50%;}
+      50% {background-position:100% 50%;}
+      100% {background-position:0% 50%;}
+    }
+
+    /* أيقونات السوشيال المتحركة */
+    ul {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      transform-style: preserve-3d;
+    }
+    ul li {
+      list-style: none;
+      width: 60px;
+      height: 60px;
+      margin: 0px 15px;
+      position: relative;
+    }
+    ul li span {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 28px !important;
+      border-radius: 20%;
+      transition: 0.5s;
+    }
+    ul li:hover span:nth-child(5) { transform: translateY(-40px); opacity: 1; }
+    ul li:hover span:nth-child(4) { transform: translateY(-30px); opacity: 0.8; }
+    ul li:hover span:nth-child(3) { transform: translateY(-20px); opacity: 0.6; }
+    ul li:hover span:nth-child(2) { transform: translateY(-10px); opacity: 0.4; }
+    ul li:hover span:nth-child(1) { transform: translateY(0); opacity: 0.2; }
+
+    /* ألوان المنصات */
+
+   ul li:nth-child(1):hover span { background: #1877F2 !important; } /* Facebook */
+   ul li:nth-child(2):hover span { background: #1DA1F2 !important; } /* Twitter/X */
+   ul li:nth-child(3):hover span { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; color: #fff !important;} /* Instagram */
+   ul li:nth-child(4):hover span { background: #25D366 !important; } /* WhatsApp */
+   ul li:nth-child(5):hover span { background: #FF0000 !important; } /* YouTube */
+   ul li:nth-child(6):hover span { background: #010101 !important; } /* TikTok */
+   ul li:nth-child(7):hover span { background: #0088CC !important; } /* Telegram */
+   ul li:nth-child(8):hover span { background: #333 !important; } /* GitHub */
+
+
+    @media (max-width: 600px) {
+      ul { flex-wrap: wrap; gap: 10px; }
+      ul li { width: 50px; height: 50px; }
+      ul li span { font-size: 22px !important; }
+      ul li:hover span:nth-child(5) { transform: translateY(-20px); }
+      ul li:hover span:nth-child(4) { transform: translateY(-15px); }
+      ul li:hover span:nth-child(3) { transform: translateY(-10px); }
+      ul li:hover span:nth-child(2) { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+  <!-- Hero Section -->
+<section class="text-center py-16 px-6" data-aos="fade-up">
+  <img src="https://i.imgur.com/CXGiUgJ.jpg" alt="شعار التطبيق" class="w-32 h-32 mx-auto rounded-2xl shadow-lg mb-6">
+  <h1 class="text-4xl md:text-5xl font-extrabold mb-4 text-indigo-700">تطبيق الأسطورة</h1>
+  <p class="text-lg md:text-xl mb-8 text-gray-600 max-w-2xl mx-auto">
+    تمتع بتجربة فريدة لمشاهدة الأفلام والمسلسلات وقنواتك المفضلة أينما كنت
+  </p>
+  <div class="flex justify-center gap-4 flex-wrap">
+    
+    <!-- زر أندرويد -->
+    <button onclick="window.location.href='https://github.com/tv-Ostora/ALOSTOURA/releases/download/V9.9.2/ALOSTOURA.apk''"
+      class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-full shadow-lg inline-flex items-center gap-2 cursor-pointer">
+      <i class="fab fa-android text-xl"></i> تحميل APK أندرويد
+    </button>
+
+    <!-- زر سمارت -->
+    <button onclick="window.location.href='https://github.com/tv-Ostora/ALOSTOURA/releases/download/V9.9.2/SMART-TV.apk''"
+      class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full shadow-lg inline-flex items-center gap-2 cursor-pointer">
+      <i class="fas fa-tv text-xl"></i> تحميل APK سمارت
+    </button>
+
+  </div>
+</section>
+<!-- Social Share Buttons -->
+<section class="py-10 bg-gray-100 text-center" data-aos="fade-up">
+  <h2 class="text-2xl font-bold mb-6">شارك مع أصدقائك 🤝</h2>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <!-- Facebook Share -->
+    <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href),'_blank')" 
+      class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow inline-flex items-center gap-2">
+      <i class="fab fa-facebook-f"></i> فيسبوك
+    </button>
+
+    <!-- Twitter Share -->
+    <button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=تطبيق الأسطورة','_blank')" 
+      class="bg-sky-400 hover:bg-sky-500 text-white font-bold py-3 px-6 rounded-full shadow inline-flex items-center gap-2">
+      <i class="fab fa-twitter"></i> تويتر
+    </button>
+
+    <!-- WhatsApp Share -->
+    <button onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent('تطبيق الأسطورة: ' + window.location.href),'_blank')" 
+      class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow inline-flex items-center gap-2">
+      <i class="fab fa-whatsapp"></i> واتساب
+    </button>
+
+    <!-- Telegram Share -->
+    <button onclick="window.open('https://t.me/share/url?url=' + encodeURIComponent(window.location.href) + '&text=تطبيق الأسطورة','_blank')" 
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow inline-flex items-center gap-2">
+      <i class="fab fa-telegram"></i> تيليجرام
+    </button>
+  </div>
+</section>
+
+
+  <!-- Features -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+      <div class="p-6 bg-gray-50 rounded-2xl shadow" data-aos="zoom-in">
+        <div class="text-indigo-600 text-4xl mb-4">📺</div>
+        <h3 class="font-bold text-xl mb-2">قنوات مباشرة</h3>
+        <p class="text-gray-600">شاهد القنوات المفضلة لديك بجودة عالية وسرعة بث رائعة.</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-2xl shadow" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-indigo-600 text-4xl mb-4">🎬</div>
+        <h3 class="font-bold text-xl mb-2">أفلام ومسلسلات</h3>
+        <p class="text-gray-600">استمتع بأحدث الأفلام والمسلسلات العربية والعالمية.</p>
+      </div>
+      <div class="p-6 bg-gray-50 rounded-2xl shadow" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-indigo-600 text-4xl mb-4">⚡</div>
+        <h3 class="font-bold text-xl mb-2">سهولة الاستخدام</h3>
+        <p class="text-gray-600">واجهة أنيقة وبسيطة تمنحك أفضل تجربة مستخدم.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="py-16 px-6 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-indigo-700 mb-10">لقطات من التطبيق</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <img src="https://i.imgur.com/a2eGmeJ.png" class="rounded-2xl shadow-lg hover:scale-105 transition">
+      <img src="https://i.imgur.com/7Pd9YMp.png" class="rounded-2xl shadow-lg hover:scale-105 transition">
+      <img src="https://i.imgur.com/ys3IYZx.png" class="rounded-2xl shadow-lg hover:scale-105 transition">
+    </div>
+  </section>
+
+  <!-- QR -->
+<section class="py-16 bg-white text-center" data-aos="fade-up">
+  <h2 class="text-2xl font-bold mb-10">📲 حمل التطبيق عبر QR</h2>
+  <div class="grid md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+
+    <!-- Android QR -->
+    <div>
+      <img src="https://i.imgur.com/zP2b9lV.png" alt="QR Android" class="mx-auto mb-4 shadow-lg rounded-lg w-40 h-40">
+      <p class="font-bold text-indigo-700">نسخة الأندرويد</p>
+      <button onclick="window.location.href='https://github.com/tv-Ostora/ALOSTOURA/releases/download/V9.9.2/ALOSTOURA.apk'"
+        class="mt-3 inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-full shadow">
+        <i class="fab fa-android text-lg"></i> تحميل مباشر
+      </button>
+    </div>
+
+    <!-- Smart TV QR -->
+    <div>
+      <img src="https://i.imgur.com/I3AX0cB.png" alt="QR Smart TV" class="mx-auto mb-4 shadow-lg rounded-lg w-40 h-40">
+      <p class="font-bold text-green-700">نسخة السمارت TV</p>
+      <button onclick="window.location.href='https://github.com/tv-Ostora/ALOSTOURA/releases/download/V9.9.2/SMART-TV.apk'"
+        class="mt-3 inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-full shadow">
+        <i class="fas fa-tv text-lg"></i> تحميل مباشر
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+<footer class="py-10 bg-gray-900 text-white text-center" data-aos="fade-up">
+  <p class="mb-6 text-lg font-bold">تابعنا على الشبكات الاجتماعية 🤝</p>
+  <div>
+    <ul>
+      <li>
+        <button onclick="window.open('https://facebook.com/AlostouraOfficial/','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-facebook-f"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://twitter.com','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-twitter"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://instagram.com','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-instagram"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://whatsapp.com/channel/0029Vb72C0xJZg4DJZaBV92h','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-whatsapp"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://youtube.com/@Alostoura.Official','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-youtube"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://tiktok.com/@alostoura_official','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-tiktok"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://t.me/','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-telegram"></span>
+        </button>
+      </li>
+      <li>
+        <button onclick="window.open('https://github.com/ALOSTOURA-TV','_blank')" class="w-full h-full">
+          <span></span><span></span><span></span><span></span><span class="fab fa-github"></span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <p class="text-sm mt-8">© 2025 تطبيق الأسطورة - جميع الحقوق محفوظة</p>
+</footer>
+
+
+  <!-- Init Scripts -->
+  <script>
+    AOS.init({duration: 1000, once: true});
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: { el: ".swiper-pagination", clickable: true },
+      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+    });
+  </script>
+</body>
+</html>
