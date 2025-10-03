@@ -123,8 +123,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -253,8 +253,32 @@
       .screenshots-slider .swiper-button-prev {
         width: 40px;
         height: 40px;
+		
       }
     }
+	
+	.slider-item {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+}
+.slider-item.active {
+  opacity: 1;
+  position: relative;
+}
+/* إزالة أي خلفية بيضاء من الـ swiper */
+.mySwiper, 
+.mySwiper .swiper-slide {
+  background: transparent; /* أو أي لون تحبه */
+}
+
+/* لو في body أو parent container */
+body, .swiper-container {
+  background: transparent; /* إزالة أي خلفية افتراضية */
+}
+
   </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -475,20 +499,32 @@
 
   <!-- Init Scripts -->
   <script>
-    AOS.init({duration: 1000, once: true});
-    
-    // Initialize Screenshots Swiper
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      autoplay: { delay: 4000, disableOnInteraction: false },
-      effect: 'slide',
-      speed: 600,
-    });
-  </script>
-  
-  <script>
+  AOS.init({ duration: 1000, once: true });
+
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false
+    },
+    effect: 'flip',
+    flipEffect: {
+      slideShadows: false, // إزالة الظلال بين الشرائح
+      limitRotation: true  // يحد من دوران الشرائح
+    },
+    speed: 800
+  });
+</script>
+
+<script>
     document.addEventListener("DOMContentLoaded", async function () {
         const CACHE_NAME = "image-wip-v1"; // اسم الكاش
         const defaultImage = "https://i.imgur.com/CXGiUgJ.jpg"; // صورة افتراضية
@@ -593,13 +629,13 @@ const CACHE_READY_FLAG = `wip-cache-ready-${pageName}`;
 const resources = [
   // CSS
   "https://unpkg.com/aos@2.3.1/dist/aos.css",
-  "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css",
+  "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
 
   
   // JS  
   "https://unpkg.com/aos@2.3.1/dist/aos.js",
-  "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+  "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
 
 ];
 
