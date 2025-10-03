@@ -280,6 +280,17 @@ body, .swiper-container {
   background: transparent; /* إزالة أي خلفية افتراضية */
 }
 
+/*الضغط على المؤشر للصعود للأعلى*/
+.floating-button {position: fixed;bottom: 20px;left: 20px;width: 50px;height: 50px;
+ background-color: #210f80;border-radius: 50%;display: none; /* إخفاؤه في البداية */
+ align-items: center;justify-content: center;cursor: pointer;
+ opacity: 0.8;box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+ transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;}
+.floating-button:hover {background-color: #fbd034;transform: scale(1.1);}
+.arrow-up {width: 0;height: 0;border-left: 12px solid transparent;
+ border-right: 12px solid transparent;border-bottom: 25px solid white;
+ position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}}
+	  
   </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -497,7 +508,44 @@ body, .swiper-container {
   <p class="text-sm mt-8">جميع الحقوق محفوظة - الأسطورة © 2025</p>
 </footer>
 
+<div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
 
+
+<script>
+        const goToTopButton = document.getElementById('go-to-top-button');
+
+// إظهار أو إخفاء الزر بناءً على موضع التمرير
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 100) { // يظهر الزر بعد تجاوز 100 بكسل
+        goToTopButton.style.display = 'flex';
+    } else {
+        goToTopButton.style.display = 'none';
+    }
+});
+
+// عند تحريك الماوس فوق الزر، يتغير اللون إلى الأصفر
+goToTopButton.addEventListener('mouseenter', function () {
+    goToTopButton.style.backgroundColor = '#fbd034';
+});
+
+// عند إزالة الماوس، يعود اللون للأزرق
+goToTopButton.addEventListener('mouseleave', function () {
+    goToTopButton.style.backgroundColor = '#092C9F';
+});
+
+// عند النقر على الزر، يتم التمرير إلى الأعلى بسلاسة
+goToTopButton.addEventListener('click', function () {
+    goToTopButton.style.backgroundColor = '#fbd034'; // تغيير اللون إلى الأصفر عند النقر
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // بعد انتهاء التمرير، يعود اللون إلى الأزرق
+    setTimeout(() => {
+        goToTopButton.style.backgroundColor = '#092C9F';
+    }, 500); // بعد نصف ثانية من النقر
+});
+</script>
+	
   <!-- Init Scripts -->
   <script>
   AOS.init({ duration: 1000, once: true });
