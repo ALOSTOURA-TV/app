@@ -623,7 +623,6 @@ body, .swiper-container {
     // منع النقر بزر الماوس الأيمن
     document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
-        alert("النقر بزر الماوس الأيمن معطل على هذه الصفحة!");
     });
 
     // منع اختصارات لوحة المفاتيح الشائعة (Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I)
@@ -631,17 +630,14 @@ body, .swiper-container {
         // مفاتيح تحظرها
         if (e.ctrlKey && ['c','s','u'].includes(e.key.toLowerCase())) {
             e.preventDefault();
-            alert("هذه الاختصارات معطلة!");
         }
         // Ctrl+Shift+I (فتح أدوات المطور)
         if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
             e.preventDefault();
-            alert("فتح أدوات المطور معطل!");
         }
         // F12 (اختصار أدوات المطور)
         if (e.key === 'F12') {
             e.preventDefault();
-            alert("فتح أدوات المطور معطل!");
         }
     });
 
