@@ -425,8 +425,8 @@
 
   </div>
 </section>
-<!--  AdSense  -->
-<div class="text-center my-6">
+<!-- AdSense -->
+<div id="ad-container" class="text-center my-6">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6738422177210733"
        crossorigin="anonymous"></script>
   <ins class="adsbygoogle"
@@ -439,6 +439,34 @@
        (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 </div>
+
+<script>
+  // استهداف منطقة الإعلانات فقط
+  const adArea = document.getElementById('ad-container');
+
+  // منع النقر بالزر الأيمن داخل الإعلانات فقط
+  adArea.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+  });
+
+  // منع سحب العناصر داخل الإعلانات
+  adArea.addEventListener('dragstart', function(e) {
+      e.preventDefault();
+  });
+
+  // منع تحديد النص داخل الإعلانات
+  adArea.addEventListener('selectstart', function(e) {
+      e.preventDefault();
+  });
+
+  // منع اختصارات أدوات المطور داخل منطقة الإعلانات
+  adArea.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && ['c', 'u', 's'].includes(e.key.toLowerCase())) e.preventDefault();
+      if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') e.preventDefault();
+      if (e.key === 'F12') e.preventDefault();
+  });
+</script>
+
   <!-- Footer -->
 <footer class="py-10 bg-gray-900 text-white text-center" data-aos="fade-up">
   <p class="mb-6 text-lg font-bold">تابعنا على الشبكات الاجتماعية 🤝</p>
@@ -599,42 +627,36 @@ goToTopButton.addEventListener('click', function () {
   startAutoSlide();
 </script>
 <script>
-// 🔒 منع النقر بزر الماوس الأيمن في كل الصفحة (بما فيها الإعلانات)
-document.addEventListener('contextmenu', e => e.preventDefault());
-
-// 🔒 منع اختصارات لوحة المفاتيح الشائعة (نسخ، حفظ، عرض الكود، أدوات المطور)
-document.addEventListener('keydown', e => {
-    const key = e.key.toLowerCase();
-
-    // Ctrl + C / S / U
-    if (e.ctrlKey && ['c','s','u'].includes(key)) {
+    // منع النقر بزر الماوس الأيمن
+    document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
-        return false;
-    }
+    });
 
-    // Ctrl + Shift + I
-    if (e.ctrlKey && e.shiftKey && key === 'i') {
+    // منع اختصارات لوحة المفاتيح الشائعة (Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I)
+    document.addEventListener('keydown', function(e) {
+        // مفاتيح تحظرها
+        if (e.ctrlKey && ['c','s','u'].includes(e.key.toLowerCase())) {
+            e.preventDefault();
+        }
+        // Ctrl+Shift+I (فتح أدوات المطور)
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+            e.preventDefault();
+        }
+        // F12 (اختصار أدوات المطور)
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+    });
+
+    // منع سحب الصور أو النصوص
+    document.addEventListener('dragstart', function(e) {
         e.preventDefault();
-        return false;
-    }
+    });
 
-    // F12
-    if (key === 'f12') {
+    // منع تحديد النصوص (اختياري)
+    document.addEventListener('selectstart', function(e) {
         e.preventDefault();
-        return false;
-    }
-});
-
-// 🔒 منع سحب أي عناصر مثل الصور أو النصوص
-document.addEventListener('dragstart', e => e.preventDefault());
-
-// 🔒 منع تحديد النصوص أو تظليلها
-document.addEventListener('selectstart', e => e.preventDefault());
-
-// ⚠️ حماية إضافية: تعطيل Inspect Element عبر النقر بزر الماوس الأوسط (العجلة)
-document.addEventListener('mousedown', e => {
-    if (e.button === 1) e.preventDefault();
-});
+    });
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", async function () {
