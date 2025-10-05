@@ -1,1 +1,11 @@
-google.com, pub-6738422177210733, DIRECT, f08c47fec0942fa0
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=https://alostoura-tv.github.io/ads.txt">
+  <title>ads.txt redirect</title>
+</head>
+<body>
+  <p>يتم توجيهك الآن إلى <a href="https://alostoura-tv.github.io/ads.txt">ads.txt</a></p>
+</body>
+</html>
