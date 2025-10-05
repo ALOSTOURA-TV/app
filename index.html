@@ -599,36 +599,42 @@ goToTopButton.addEventListener('click', function () {
   startAutoSlide();
 </script>
 <script>
-    // منع النقر بزر الماوس الأيمن
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
+// 🔒 منع النقر بزر الماوس الأيمن في كل الصفحة (بما فيها الإعلانات)
+document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // منع اختصارات لوحة المفاتيح الشائعة (Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I)
-    document.addEventListener('keydown', function(e) {
-        // مفاتيح تحظرها
-        if (e.ctrlKey && ['c','s','u'].includes(e.key.toLowerCase())) {
-            e.preventDefault();
-        }
-        // Ctrl+Shift+I (فتح أدوات المطور)
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-            e.preventDefault();
-        }
-        // F12 (اختصار أدوات المطور)
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-    });
+// 🔒 منع اختصارات لوحة المفاتيح الشائعة (نسخ، حفظ، عرض الكود، أدوات المطور)
+document.addEventListener('keydown', e => {
+    const key = e.key.toLowerCase();
 
-    // منع سحب الصور أو النصوص
-    document.addEventListener('dragstart', function(e) {
+    // Ctrl + C / S / U
+    if (e.ctrlKey && ['c','s','u'].includes(key)) {
         e.preventDefault();
-    });
+        return false;
+    }
 
-    // منع تحديد النصوص (اختياري)
-    document.addEventListener('selectstart', function(e) {
+    // Ctrl + Shift + I
+    if (e.ctrlKey && e.shiftKey && key === 'i') {
         e.preventDefault();
-    });
+        return false;
+    }
+
+    // F12
+    if (key === 'f12') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// 🔒 منع سحب أي عناصر مثل الصور أو النصوص
+document.addEventListener('dragstart', e => e.preventDefault());
+
+// 🔒 منع تحديد النصوص أو تظليلها
+document.addEventListener('selectstart', e => e.preventDefault());
+
+// ⚠️ حماية إضافية: تعطيل Inspect Element عبر النقر بزر الماوس الأوسط (العجلة)
+document.addEventListener('mousedown', e => {
+    if (e.button === 1) e.preventDefault();
+});
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", async function () {
