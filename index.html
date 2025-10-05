@@ -122,176 +122,166 @@
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- Sweper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweper@10/sweper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweper@10/sweper-bundle.min.js"></script>
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <body oncontextmenu="return false;">
 
   <style>
-    /* خلفية متحركة */
-    body {
-      background: linear-gradient(-45deg, #e0f2fe, #ede9fe, #dbeafe, #f1f5f9);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-    }
-    @keyframes gradientBG {
-      0% {background-position:0% 50%;}
-      50% {background-position:100% 50%;}
-      100% {background-position:0% 50%;}
-    }
+  /* 🌈 خلفية متحركة بتدرج لوني ديناميكي */
+  body {
+    background: linear-gradient(-45deg, #e0f2fe, #ede9fe, #dbeafe, #f1f5f9); /* تدرج لوني مائل */
+    background-size: 400% 400%; /* لجعل التدرج قابل للحركة */
+    animation: gradientBG 15s ease infinite; /* تشغيل الحركة بشكل متكرر */
+  }
 
-    /* أيقونات السوشيال المتحركة */
-    ul {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      transform-style: preserve-3d;
-    }
-    ul li {
-      list-style: none;
-      width: 60px;
-      height: 60px;
-      margin: 0px 15px;
-      position: relative;
-    }
-    ul li span {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      background: #2a2a2a;
-      color: #fff;
-      font-size: 28px !important;
-      border-radius: 20%;
-      transition: 0.5s;
-    }
-    ul li:hover span:nth-child(5) { transform: translateY(-40px); opacity: 1; }
-    ul li:hover span:nth-child(4) { transform: translateY(-30px); opacity: 0.8; }
-    ul li:hover span:nth-child(3) { transform: translateY(-20px); opacity: 0.6; }
-    ul li:hover span:nth-child(2) { transform: translateY(-10px); opacity: 0.4; }
-    ul li:hover span:nth-child(1) { transform: translateY(0); opacity: 0.2; }
+  /* 🔁 حركة التدرج اللوني */
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
 
-    /* ألوان المنصات */
+  /* 💫 إعدادات قائمة الأيقونات (السوشيال ميديا) */
+  ul {
+    position: relative;
+    display: flex;
+    justify-content: center; /* توسيط الأيقونات أفقيًا */
+    transform-style: preserve-3d; /* للحفاظ على تأثير العمق */
+  }
 
-   ul li:nth-child(1):hover span { background: #1877F2 !important; } /* Facebook */
-   ul li:nth-child(2):hover span { background: #1DA1F2 !important; } /* Twitter/X */
-   ul li:nth-child(3):hover span { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; color: #fff !important;} /* Instagram */
-   ul li:nth-child(4):hover span { background: #25D366 !important; } /* WhatsApp */
-   ul li:nth-child(5):hover span { background: #FF0000 !important; } /* YouTube */
-   ul li:nth-child(6):hover span { background: #010101 !important; } /* TikTok */
-   ul li:nth-child(7):hover span { background: #0088CC !important; } /* Telegram */
-   ul li:nth-child(8):hover span { background: #333 !important; } /* GitHub */
+  ul li {
+    list-style: none; /* إزالة النقط من القائمة */
+    width: 60px;
+    height: 60px;
+    margin: 0px 15px; /* تباعد بين الأيقونات */
+    position: relative;
+  }
 
-    /* تخصيص سلايدر لقطات التطبيق */
-    .screenshots-slider {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      overflow: hidden;
-      border-radius: 20px;
-     
-    }
-    
-    .screenshots-slider .swiper-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #fff;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-    
-    .screenshots-slider .swiper-slide img {
-      width: 250px;
-      height: auto;
-      object-fit: contain;
-      border-radius: 15px;
-    }
-    
-    .screenshots-slider .swiper-button-next,
-    .screenshots-slider .swiper-button-prev {
-      background-color: rgba(79, 70, 229, 0.8);
-      color: white;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      
-    }
-    
-    .screenshots-slider .swiper-button-next:after,
-    .screenshots-slider .swiper-button-prev:after {
-      font-size: 20px;
-      font-weight: bold;
-    }
-    
-    .screenshots-slider .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background: #c7d2fe;
-      opacity: 0.7;
-    }
-    
-    .screenshots-slider .swiper-pagination-bullet-active {
-      background: #4f46e5;
-      opacity: 1;
-    }
+  /* 🎨 تنسيق الأيقونة نفسها داخل العنصر */
+  ul li span {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background: #2a2a2a; /* اللون الافتراضي */
+    color: #fff;
+    font-size: 28px !important;
+    border-radius: 20%; /* زوايا دائرية خفيفة */
+    transition: 0.5s; /* حركة سلسة عند التحويم */
+  }
 
-    @media (max-width: 600px) {
-      ul { flex-wrap: wrap; gap: 10px; }
-      ul li { width: 50px; height: 50px; }
-      ul li span { font-size: 22px !important; }
-      ul li:hover span:nth-child(5) { transform: translateY(-20px); }
-      ul li:hover span:nth-child(4) { transform: translateY(-15px); }
-      ul li:hover span:nth-child(3) { transform: translateY(-10px); }
-      ul li:hover span:nth-child(2) { transform: translateY(-5px); }
-      
-      .screenshots-slider .swiper-button-next,
-      .screenshots-slider .swiper-button-prev {
-        width: 40px;
-        height: 40px;
-		
-      }
-    }
-	
-	.slider-item {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-}
-.slider-item.active {
-  opacity: 1;
-  position: relative;
-}
-/* إزالة أي خلفية بيضاء من الـ swiper */
-.mySwiper, 
-.mySwiper .swiper-slide {
-  background: transparent; /* أو أي لون تحبه */
+  /* ⚡ تأثير الارتفاع التدريجي عند تمرير الفأرة */
+  ul li:hover span:nth-child(5) { transform: translateY(-40px); opacity: 1; }
+  ul li:hover span:nth-child(4) { transform: translateY(-30px); opacity: 0.8; }
+  ul li:hover span:nth-child(3) { transform: translateY(-20px); opacity: 0.6; }
+  ul li:hover span:nth-child(2) { transform: translateY(-10px); opacity: 0.4; }
+  ul li:hover span:nth-child(1) { transform: translateY(0); opacity: 0.2; }
+
+  /* 🎯 تخصيص لون الخلفية لكل منصة عند التحويم */
+  ul li:nth-child(1):hover span { background: #1877F2 !important; } /* Facebook */
+  ul li:nth-child(2):hover span { background: #1DA1F2 !important; } /* Twitter/X */
+  ul li:nth-child(3):hover span { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important; color: #fff !important; } /* Instagram */
+  ul li:nth-child(4):hover span { background: #25D366 !important; } /* WhatsApp */
+  ul li:nth-child(5):hover span { background: #FF0000 !important; } /* YouTube */
+  ul li:nth-child(6):hover span { background: #010101 !important; } /* TikTok */
+  ul li:nth-child(7):hover span { background: #0088CC !important; } /* Telegram */
+  ul li:nth-child(8):hover span { background: #333 !important; } /* GitHub */
+
+  /* 🖼️ إعدادات السلايدر (عرض الشرائح) المتمركز في الصفحة */
+  .slider-container {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 0 auto; /* توسيط أفقي للسلايدر */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* إخفاء الأجزاء الخارجة من الإطار */
+    border-radius: 10px;
+    background: transparent; /* خلفية شفافة */
+  }
+
+  /* 🎞️ إعدادات الشريحة المفردة داخل السلايدر */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* لضمان تناسب الصورة داخل الإطار */
+    left: 100%; /* خارج الإطار مبدئيًا */
+    opacity: 0; /* مخفية افتراضيًا */
+    transition: left 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 1s ease-in-out; /* حركة انتقالية سلسة */
+  }
+
+  /* 🔵 الشريحة النشطة */
+  .slide.active {
+    left: 0;
+    opacity: 1;
+  }
+
+  /* ⚪ الشرائح السابقة والتالية */
+  .slide.prev,
+  .slide.next {
+    opacity: 0;
+  }
+
+  /* 📱 تحسين المظهر على الشاشات الصغيرة */
+  @media (max-width: 600px) {
+    ul { flex-wrap: wrap; gap: 10px; } /* توزيع الأيقونات على سطرين */
+    ul li { width: 50px; height: 50px; } /* تصغير الحجم */
+    ul li span { font-size: 22px !important; } /* تصغير الأيقونات */
+    /* تعديل ارتفاع التأثير عند اللمس */
+    ul li:hover span:nth-child(5) { transform: translateY(-20px); }
+    ul li:hover span:nth-child(4) { transform: translateY(-15px); }
+    ul li:hover span:nth-child(3) { transform: translateY(-10px); }
+    ul li:hover span:nth-child(2) { transform: translateY(-5px); }
+  }
+  
+  
+  /* ⬆️ الضغط على المؤشر للصعود للأعلى (زر الرجوع لأعلى الصفحة) */
+.floating-button {
+  position: fixed;            /* تثبيت الزر في مكانه حتى عند التمرير */
+  bottom: 20px;               /* يبتعد 20px عن أسفل الصفحة */
+  left: 20px;                 /* يبتعد 20px عن يسار الصفحة */
+  width: 50px;                /* عرض الزر */
+  height: 50px;               /* ارتفاع الزر */
+  background-color: #4338ca;  /* اللون الأساسي للزر */
+  border-radius: 50%;         /* جعله دائري الشكل */
+  display: none;              /* إخفاء الزر في البداية */
+  align-items: center;        /* توسيط السهم عموديًا داخل الدائرة */
+  justify-content: center;    /* توسيط السهم أفقيًا */
+  cursor: pointer;            /* تغيير المؤشر عند المرور فوق الزر */
+  opacity: 0.8;               /* شفافية بسيطة لإعطاء مظهر ناعم */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5); /* ظل خفيف حول الزر */
+  transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease; /* حركات انتقالية سلسة */
 }
 
-/* لو في body أو parent container */
-body, .swiper-container {
-  background: transparent; /* إزالة أي خلفية افتراضية */
+/* 🎯 عند تمرير الفأرة فوق الزر */
+.floating-button:hover {
+  background-color: #4338ca;  /* نفس اللون للحفاظ على التناسق */
+  transform: scale(1.1);      /* تكبير الزر قليلًا عند التحويم */
 }
 
-/*الضغط على المؤشر للصعود للأعلى*/
-.floating-button {position: fixed;bottom: 20px;left: 20px;width: 50px;height: 50px;
- background-color: #210f80;border-radius: 50%;display: none; /* إخفاؤه في البداية */
- align-items: center;justify-content: center;cursor: pointer;
- opacity: 0.8;box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
- transition: left 0.3s ease, opacity 0.3s ease, transform 0.2s ease;}
-.floating-button:hover {background-color: #fbd034;transform: scale(1.1);}
-.arrow-up {width: 0;height: 0;border-left: 12px solid transparent;
- border-right: 12px solid transparent;border-bottom: 25px solid white;
- position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}}
-	  
-  </style>
+/* ⬆️ شكل السهم الأبيض داخل الدائرة */
+.arrow-up {
+  width: 0;                   /* عرض السهم يعتمد على حدود الـ border */
+  height: 0;                  /* لا ارتفاع فعلي، فقط باستخدام الحدود */
+  border-left: 12px solid transparent;   /* إنشاء مثلث باستخدام الحدود */
+  border-right: 12px solid transparent;
+  border-bottom: 25px solid white;       /* السهم موجه للأعلى باللون الأبيض */
+  position: absolute;         /* تموضع داخل الزر */
+  top: 50%;                   /* توسيط عمودي */
+  left: 50%;                  /* توسيط أفقي */
+  transform: translate(-50%, -50%); /* لضبط المركز بدقة */
+}
+
+</style>
+
+  
 </head>
 <body class="font-sans text-gray-800">
   <!-- Hero Section -->
@@ -317,6 +307,7 @@ body, .swiper-container {
 
   </div>
 </section>
+
 <!-- Social Share Buttons -->
 <section class="py-10 bg-gray-100 text-center" data-aos="fade-up">
   <h2 class="text-2xl font-bold mb-6">شارك مع أصدقائك 🤝</h2>
@@ -347,7 +338,6 @@ body, .swiper-container {
   </div>
 </section>
 
-
   <!-- Features -->
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
@@ -370,60 +360,36 @@ body, .swiper-container {
   </section>
 
   <!-- Screenshots Section -->
-  <section class="py-16 px-6 bg-gradient-to-b from-white to-gray-50" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">لقطات من التطبيق</h2>
-      <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">استكشف واجهة تطبيق الأسطورة وتصميمه المميز الذي يمنحك تجربة مشاهدة فريدة</p>
-      
-      <div class="screenshots-slider">
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/MQC9elX.png" alt="لقطة من التطبيق 1">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/fSfY4AK.png" alt="لقطة من التطبيق 2">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/NyeF9tX.png" alt="لقطة من التطبيق 3">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/zI3zA7E.png" alt="لقطة من التطبيق 4">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/JNp3WjU.png" alt="لقطة من التطبيق 5">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/cJp3vPk.png" alt="لقطة من التطبيق 6">
-            </div>
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/NcLWUkf.png" alt="لقطة من التطبيق 7">
-            </div>
-
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
+  <section class="py-16 bg-gray-50 text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold mb-12 text-indigo-700">لقطات من التطبيق 📱</h2>
+    
+    <!-- السلايدر المتمركز -->
+    <div class="slider-container">
+      <img alt="لقطة 1" src="https://i.imgur.com/MQC9elX.png" class="slide active">
+      <img alt="لقطة 2" src="https://i.imgur.com/fSfY4AK.png" class="slide next">
+      <img alt="لقطة 3" src="https://i.imgur.com/NyeF9tX.png" class="slide prev">
+      <img alt="لقطة 4" src="https://i.imgur.com/zI3zA7E.png" class="slide prev">
+      <img alt="لقطة 5" src="https://i.imgur.com/JNp3WjU.png" class="slide prev">
+      <img alt="لقطة 6" src="https://i.imgur.com/cJp3vPk.png" class="slide prev">
+      <img alt="لقطة 7" src="https://i.imgur.com/NcLWUkf.png" class="slide prev">
+    </div>
+    
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+      <div class="text-center">
+        <div class="text-indigo-600 text-2xl mb-2">🎯</div>
+        <p class="text-sm font-medium">واجهة سهلة</p>
       </div>
-      
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
-        <div class="text-center">
-          <div class="text-indigo-600 text-2xl mb-2">🎯</div>
-          <p class="text-sm font-medium">واجهة سهلة</p>
-        </div>
-        <div class="text-center">
-          <div class="text-indigo-600 text-2xl mb-2">🚀</div>
-          <p class="text-sm font-medium">تصفح سريع</p>
-        </div>
-        <div class="text-center">
-          <div class="text-indigo-600 text-2xl mb-2">🎨</div>
-          <p class="text-sm font-medium">تصميم أنيق</p>
-        </div>
-        <div class="text-center">
-          <div class="text-indigo-600 text-2xl mb-2">📱</div>
-          <p class="text-sm font-medium">متوافق مع جميع الأجهزة</p>
-        </div>
+      <div class="text-center">
+        <div class="text-indigo-600 text-2xl mb-2">🚀</div>
+        <p class="text-sm font-medium">تصفح سريع</p>
+      </div>
+      <div class="text-center">
+        <div class="text-indigo-600 text-2xl mb-2">🎨</div>
+        <p class="text-sm font-medium">تصميم أنيق</p>
+      </div>
+      <div class="text-center">
+        <div class="text-indigo-600 text-2xl mb-2">📱</div>
+        <p class="text-sm font-medium">متوافق مع جميع الأجهزة</p>
       </div>
     </div>
   </section>
@@ -455,8 +421,6 @@ body, .swiper-container {
 
   </div>
 </section>
-
-
 
   <!-- Footer -->
 <footer class="py-10 bg-gray-900 text-white text-center" data-aos="fade-up">
@@ -508,6 +472,7 @@ body, .swiper-container {
   <p class="text-sm mt-8">جميع الحقوق محفوظة - الأسطورة © 2025</p>
 </footer>
 
+
 <div id="go-to-top-button" class="floating-button"><div class="arrow-up"></div></div>
 
 
@@ -530,7 +495,7 @@ goToTopButton.addEventListener('mouseenter', function () {
 
 // عند إزالة الماوس، يعود اللون للأزرق
 goToTopButton.addEventListener('mouseleave', function () {
-    goToTopButton.style.backgroundColor = '#092C9F';
+    goToTopButton.style.backgroundColor = '#4338ca';
 });
 
 // عند النقر على الزر، يتم التمرير إلى الأعلى بسلاسة
@@ -541,41 +506,115 @@ goToTopButton.addEventListener('click', function () {
 
     // بعد انتهاء التمرير، يعود اللون إلى الأزرق
     setTimeout(() => {
-        goToTopButton.style.backgroundColor = '#092C9F';
+        goToTopButton.style.backgroundColor = '#4338ca';
     }, 500); // بعد نصف ثانية من النقر
 });
 </script>
-	
+
+
+
   <!-- Init Scripts -->
   <script>
+  // تفعيل مكتبة AOS (Animate On Scroll) مع إعدادات المدة والتشغيل مرة واحدة فقط
   AOS.init({ duration: 1000, once: true });
 
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    autoplay: {
-      delay: 1000,
-      disableOnInteraction: false
-    },
-    effect: 'flip',
-    flipEffect: {
-      slideShadows: false, // إزالة الظلال بين الشرائح
-      limitRotation: true  // يحد من دوران الشرائح
-    },
-    speed: 800
-  });
-</script>
+  // تعريف متغيرات السلايدر (عرض الشرائح)
+  let index = 0; // الفهرس الحالي للشريحة النشطة
+  const slides = document.querySelectorAll(".slide"); // جميع الشرائح
+  let startX = 0; // لتخزين موضع بداية اللمس (في الشاشات اللمسية)
+  let autoSlideInterval; // متغير لتخزين المؤقت الخاص بالتنقل التلقائي
 
+  // تحديث حالة الشرائح (الشريحة النشطة، السابقة، التالية)
+  function updateSlides() {
+    slides.forEach(slide => slide.classList.remove("active", "prev", "next"));
+    slides[index].classList.add("active"); // الشريحة الحالية
+    slides[(index + 1) % slides.length].classList.add("next"); // الشريحة التالية
+    slides[(index - 1 + slides.length) % slides.length].classList.add("prev"); // الشريحة السابقة
+  }
+
+  // الانتقال إلى الشريحة التالية
+  function nextSlide() {
+    index = (index + 1) % slides.length; // تحديث الفهرس
+    updateSlides(); // إعادة تحديث الشرائح
+  }
+
+  // الانتقال إلى الشريحة السابقة
+  function prevSlide() {
+    index = (index - 1 + slides.length) % slides.length;
+    updateSlides();
+  }
+
+  // بدء التشغيل التلقائي للسلايدر (كل 3 ثوانٍ)
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000);
+  }
+
+  // إيقاف التشغيل التلقائي
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+
+  // تحديد عنصر السلايدر الرئيسي
+  const sliderContainer = document.querySelector(".slider-container");
+
+  // عند بدء اللمس (Touch start)
+  sliderContainer.addEventListener("touchstart", (e) => {
+    stopAutoSlide(); // إيقاف التبديل التلقائي مؤقتًا
+    startX = e.touches[0].clientX; // تسجيل موضع بداية اللمس
+  });
+
+  // عند انتهاء اللمس (Touch end)
+  sliderContainer.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX; // موضع نهاية اللمس
+    let diff = endX - startX; // الفرق بين البداية والنهاية لتحديد الاتجاه
+
+    // إذا تم السحب لليمين → الشريحة السابقة
+    if (diff > 50) prevSlide();
+    // إذا تم السحب لليسار → الشريحة التالية
+    else if (diff < -50) nextSlide();
+
+    startAutoSlide(); // إعادة تشغيل التبديل التلقائي بعد السحب
+  });
+
+  // تفعيل أول شريحة وبدء التشغيل التلقائي عند تحميل الصفحة
+  updateSlides();
+  startAutoSlide();
+</script>
+<script>
+    // منع النقر بزر الماوس الأيمن
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // منع اختصارات لوحة المفاتيح الشائعة (Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I)
+    document.addEventListener('keydown', function(e) {
+        // مفاتيح تحظرها
+        if (e.ctrlKey && ['c','s','u'].includes(e.key.toLowerCase())) {
+            e.preventDefault();
+        }
+        // Ctrl+Shift+I (فتح أدوات المطور)
+        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+            e.preventDefault();
+        }
+        // F12 (اختصار أدوات المطور)
+        if (e.key === 'F12') {
+            e.preventDefault();
+        }
+    });
+
+    // منع سحب الصور أو النصوص
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    });
+
+    // منع تحديد النصوص (اختياري)
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+    });
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", async function () {
-        const CACHE_NAME = "image-wip-v1"; // اسم الكاش
+        const CACHE_NAME = "image-wep-v1"; // اسم الكاش
         const defaultImage = "https://i.imgur.com/CXGiUgJ.jpg"; // صورة افتراضية
         const images = document.querySelectorAll("img");
 
@@ -667,55 +706,24 @@ goToTopButton.addEventListener('click', function () {
         });
     });
 </script>
-<script>
-    // منع النقر بزر الماوس الأيمن
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    });
 
-    // منع اختصارات لوحة المفاتيح الشائعة (Ctrl+C, Ctrl+S, Ctrl+U, Ctrl+Shift+I)
-    document.addEventListener('keydown', function(e) {
-        // مفاتيح تحظرها
-        if (e.ctrlKey && ['c','s','u'].includes(e.key.toLowerCase())) {
-            e.preventDefault();
-        }
-        // Ctrl+Shift+I (فتح أدوات المطور)
-        if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
-            e.preventDefault();
-        }
-        // F12 (اختصار أدوات المطور)
-        if (e.key === 'F12') {
-            e.preventDefault();
-        }
-    });
-
-    // منع سحب الصور أو النصوص
-    document.addEventListener('dragstart', function(e) {
-        e.preventDefault();
-    });
-
-    // منع تحديد النصوص (اختياري)
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-    });
-</script>
 <script>
 const CACHE_VERSION = "v1";
-const pageName = "Wip";
+const pageName = "Wep";
 const pageId = pageName.replace(/\s+/g, "-").toLowerCase();
-const CACHE_NAME = `wip-assets-${pageName}`;
-const CACHE_READY_FLAG = `wip-cache-ready-${pageName}`;
+const CACHE_NAME = `Wep-assets-${pageName}`;
+const CACHE_READY_FLAG = `Wep-cache-ready-${pageName}`;
 
 const resources = [
   // CSS
   "https://unpkg.com/aos@2.3.1/dist/aos.css",
-  "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css",
+  "https://cdn.jsdelivr.net/npm/sweper@10/sweper-bundle.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
 
   
   // JS  
   "https://unpkg.com/aos@2.3.1/dist/aos.js",
-  "https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+  "https://cdn.jsdelivr.net/npm/sweper@10/sweper-bundle.min.js"
 
 ];
 
